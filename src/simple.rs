@@ -3,9 +3,6 @@
 /// 不要使用额外的数组空间，你必须在原地修改输入数组 并在使用 O(1) 额外空间的条件下完成。
 ///
 pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
-	if nums.len()  == 1 {
-		nums.len() as i32
-	} else {
 		let mut p1 = 0;
 		let mut p2 = 1;
 		while p2 < nums.len() {
@@ -16,9 +13,7 @@ pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
 				p1 += 1;
 			}
 		}
-		
 		nums.len() as i32
-	}
 }
 
 
