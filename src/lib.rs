@@ -1,2 +1,2 @@
-#[deny(soft_unstable)]
+#![feature(destructuring_assignment)]
 mod simple;
