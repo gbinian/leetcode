@@ -1,0 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: npm install && cargo build
+    command: cargo watch -x run
