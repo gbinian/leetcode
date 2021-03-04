@@ -422,7 +422,7 @@ mod tests {
 	}
 	#[test]
 	fn test_longest_common_prefix() {
-		let s = vec!["flower".to_string(),"flow".to_string(),"flight".to_string()];
-		assert_eq!(longest_common_prefix(v), "fl".to_string());
+		let mut s = vec!["flower".to_string(),"flow".to_string(),"flight".to_string()];
+		assert_eq!(longest_common_prefix(&mut s), "fl".to_string());
 	}
 }
