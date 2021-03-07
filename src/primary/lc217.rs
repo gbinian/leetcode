@@ -26,14 +26,13 @@ pub fn contains_duplicate(mut nums: Vec<i32>) -> bool {
 
     nums.sort();
     nums.windows(2)
-        .find(|a| {
+        .any(|a| {
             let mut res = false;
             if let [i, j] = a {
                 res = i == j
             }
             res
         })
-        .is_some()
     // nums.len() < len
     // 0ms 2.6mb
 }

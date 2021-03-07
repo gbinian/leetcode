@@ -1,6 +1,11 @@
+mod lc1;
 mod lc136;
 mod lc189;
 mod lc217;
 mod lc26;
+mod lc283;
+mod lc344;
 mod lc350;
 mod lc66;
+mod lc7;
+mod lc387;

@@ -1,23 +1,4 @@
-/// 给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1
-pub fn first_uniq_char(s: String) -> i32 {
-    let mut i = -1;
-    let mut m = std::collections::HashMap::new();
-    for c in s.chars() {
-        if m.contains_key(&c) {
-            let v = m.get_mut(&c).unwrap();
-            *v += 1;
-        } else {
-            m.insert(c, 1);
-        }
-    }
-    for (j, c) in s.chars().enumerate() {
-        if *m.get(&c).unwrap() == 1 {
-            i = j as i32;
-            break;
-        }
-    }
-    i
-}
+
 
 ///给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
 pub fn is_palindrome(s: String) -> bool {
@@ -237,11 +218,7 @@ pub fn longest_common_prefix(strs: Vec<String>) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
-    #[test]
-    fn test_first_uniq_char() {
-        let s = "leetcode";
-        assert_eq!(first_uniq_char(s.into()), 0)
-    }
+
     #[test]
     fn test_is_palindrome() {
         let s = "a.";
