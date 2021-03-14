@@ -1,4 +1,3 @@
-use std::hint::unreachable_unchecked;
 
 /// 罗马数字转整数
 /// 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
@@ -12,7 +11,6 @@ use std::hint::unreachable_unchecked;
 
 pub fn roman_to_int(s: String) -> i32 {
     s.chars().fold((0, ' '), |a, b|{
-        dbg!(&a, &b);
         match (a.1, b) {
             ('I', 'V') => (a.0 + 3, 'V'),
             ('I', 'X') => (a.0 + 8, 'X'),
